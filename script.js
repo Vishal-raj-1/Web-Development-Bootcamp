@@ -4,7 +4,6 @@ const addTaskButton = document.getElementById('addTask');
 const input = document.getElementsByTagName('input')[0];
 const todoList = document.getElementById('todo-list');
 const todos = document.getElementsByClassName('todos');
-const deleteButton = document.getElementsByClassName('close')[0];
 
 // add task
 addTaskButton.addEventListener('click', function () {
@@ -20,15 +19,20 @@ addTaskButton.addEventListener('click', function () {
             var todo = this.parentElement;
             todo.style.display = "none";
         })
+
+        let todosArray = JSON.parse(localStorage.getItem('todos'));
+        if(todosArray === null){
+            todosArray = [input.value];
+            localStorage.setItem('todos', JSON.stringify(todosArray));
+        }
+        else{
+            todosArray.push(input.value);
+            localStorage.setItem('todos', todosArray);
+        }
         todoList.appendChild(newTodo);
         input.value = "";
     }
     else {
         alert('You have to write something');
     }
-})
-
-deleteButton.addEventListener('click', function () {
-    var todo = this.parentElement;
-    todo.style.display = "none";
 })
