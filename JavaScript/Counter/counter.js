@@ -1,6 +1,5 @@
 const decButton = document.getElementById('decButton')
 const incButton = document.getElementById('incButton')
-const randomButton = document.getElementById('randomButton')
 const zeroButton = document.getElementById('zeroButton')
 const spanNumber = document.getElementById('number');
 let num = 0;
@@ -12,11 +11,6 @@ decButton.addEventListener('click', () => {
 
 incButton.addEventListener('click', () => {
     num++;
-    spanNumber.innerText = num;
-})
-
-randomButton.addEventListener('click', () => {
-    num = Math.floor(Math.random()*1000);
     spanNumber.innerText = num;
 })
 

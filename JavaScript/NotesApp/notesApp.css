@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background: transparent;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100vw;
+    padding: 45px 0;
+    display: flex;
+    background: linear-gradient(24deg, #f58fe0, #9b79eeb8);
+}
+
+.notes-app{
+    width: 33vw;
+    margin: 0px 23px;
+    min-width: 330px;
+    box-shadow: rgb(192 142 232) 1px 1px 7px 4px;
+    border-radius: 7px;
+}
+
+.notes-app h1{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 12px;
+}
+
+.input-box{
+    padding: 12px 13px;
+}
+
+.input-box label{
+    display: block;
+    margin-bottom: 3px;
+    margin-top: 12px;
+}
+
+.input-box input, textarea{
+    display: block;
+    width: 100%;
+    padding: 3px;
+    border-radius: 3px;
+    border: 1px solid #000000;
+    box-shadow: 3px 3px 2px 2px #d797e9;
+}
+
+button{
+    background: black;
+    border: 1px solid black;
+    border-radius: 2px;
+    color: white;
+    padding: 6px 12px;
+    margin-top: 12px ;
+}
+
+#notes{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.note{
+    box-shadow: rgb(192 142 232) 1px 1px 7px 4px;
+    border-radius: 4px;
+    padding: 12px 23px;
+    margin: 6px;
+    width: 30vw;
+    min-width: 250px;
+    margin-bottom: 22px;
+    max-height: 200px;
+}
+
+.title{
+    font-size: 23px;
+    margin-bottom: 6px;
+}
+
+.text{
+    font-size: 16px;
+}
+
+@media screen and ( max-width: 600px) {
+    .container{
+        flex-direction: column;
+    }
+
+    .notes-app{
+        margin: 0 auto;
+    }
+    #notes{
+        margin-top: 34px;
+    }
+
+    .note{
+        min-width: 330px;
+    }
+}

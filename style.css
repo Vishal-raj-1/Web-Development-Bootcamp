@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.projects{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card{
+    min-width: 330px;
+    width: 45%;
+    padding: 12px;
+}
+
+.card-img img{
+    min-width: 330px;
+    width: 100%;
+}
+

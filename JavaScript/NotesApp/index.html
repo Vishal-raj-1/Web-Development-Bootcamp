@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="notesApp.css" />
+    <title>Notes App</title>
+  </head>
+
+  <body>
+    <div class="container">
+        <div class="notes-app">
+          <h1 class="text-center">My Notes App</h1>
+          <div class="input-box">
+            <label for="addTitle">Title</label>
+            <input type="text" id="addTitle" />
+    
+            <label for="addText">Note</label>
+            <textarea id="addText" cols="10" rows="10"></textarea>
+    
+            <button id="addNote">Add Note</button>
+          </div>
+        </div>
+        <div id="notes"></div>
+    </div>
+
+    <script src="notesApp.js"></script>
+  </body>
+</html>
